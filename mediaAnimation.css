@@ -25,6 +25,11 @@
     margin-left: calc(var(--margin-default) + 10%);
     margin-right: var(--margin-default);
   }
+
+  .map-info-container {
+    top: 750%;
+    padding-right: 8%;
+  }
 }
 
 @media all and (max-width: 1128px) {
@@ -34,17 +39,43 @@
     margin-left: calc(var(--margin-default) + 22%);
     margin-right: var(--margin-default);
   }
+
+  .map-info-container {
+    top: 1110%;
+    padding-right: 14%;
+    margin-left: 0;
+    width: 25%;
+  }
 }
 
 @media all and (max-width: 1024px) {
   .covid-warning-text {
     margin-left: 50px;
   }
+
+  .map-info-container {
+    flex-direction: column;
+    padding-right: 2%;
+    top: 1095%;
+  }
+
+  .contact-us-buttons-container{
+    margin-bottom: 2rem;
+  }
+
+  .address-container{
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
 }
 
 @media all and (max-width: 994px) {
   #pricing-plan-card-scaled {
     margin-bottom: 4rem;
+  }
+
+  .map-info-container{
+    top: 1190%;
   }
 }
 
@@ -52,12 +83,28 @@
   nav {
     display: none;
   }
+
+  .contact-us-buttons-container{
+    flex-direction: column;
+  }
+
+  .map-info-container{
+    top: 1182.5%;
+  }
 }
 
 @media all and (max-width: 768px) {
   .grid {
     margin-left: calc(var(--margin-default) + 15%);
     margin-right: var(--margin-default);
+  }
+
+  .map-info-container p{
+    font-size: 0.8rem;
+  }
+
+  .map-info-container{
+    top: 1188%;
   }
 }
 
@@ -92,5 +139,18 @@
 
   .hero-button {
     margin-right: var(--margin-default);
+  }
+
+  .map-info-container p{
+    display: none;
+  }
+
+  .map-info-container .address-container p{
+    display: block;
+  }
+
+  .map-info-container{
+    top: 1215%;
+    padding: 10%;
   }
 }
