@@ -393,6 +393,49 @@ header {
   border: 10px solid var(--accent-color);
 }
 
+/* Contact Us */
+
+#map{
+  height: 80vh;
+  width: 100%;
+}
+
+.map-info-container{
+  background-color: var(--dark-color);
+  z-index: 1037;
+  color: var(--white-color);
+  display: flex;
+  width: 30%;
+  position: absolute;
+  padding: 2%;
+  border-radius: 25px;
+  /* top: 4950px; */
+  top: 650%;
+  margin-left: var(--margin-default);
+}
+
+.map-info-container-left{
+  margin-right: 2rem;
+}
+
+.map-info-container-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-us-buttons-container{
+  display: flex;
+}
+
+.address-container{
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 1px 3px #000000;
+}
+
 /* Footer */
 
 .footer-texts-container {

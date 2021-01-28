@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaAnimation.css">
-    <title>Document</title>
+    <title>SCFitness</title>
 </head>
 <body>
     <header id="hero">
@@ -230,6 +230,32 @@
             </div>
         </div>
     </section>
+    <section id="contactus">
+        <div class="subtitle-container">
+            <h1 class="subtitle raleway">Contact Us</h1>
+        </div> 
+        <div class="rest-of-container">
+            <div id="map"></div>
+            <div class="map-info-container">
+                <div class="map-info-container-left">
+                    <p class="nunito">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                    <div class="contact-us-buttons-container">
+                        <a href="#"><button class="nunito button">111111111</button></a>
+                        <a href="#"><button class="nunito button">saaks0524@gmail.com</button></a>
+                    </div>
+                </div>
+                <div class="map-info-container-right">
+                    <div class="address-container">
+                        <p class="nunito">
+                            19306 25th Ave SE, Bothell, WA, 98012
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="footer">
         <div class="footer-texts-container nunito">
             <div class="footer-text-container">
@@ -319,5 +345,30 @@
           },
         });
     </script>
+    <script>
+        function initMap(){
+            let options = {
+                zoom: 14,
+                center: {lat: 47.8226663, lng: -122.1992388}
+            }
+
+            let map = new google.maps.Map(document.getElementById('map'), options);
+            let marker = new google.maps.Marker({
+                position: {lat: 47.8226663, lng: -122.199},
+                map: map
+            })
+
+            let infoWindow = new google.maps.InfoWindow({
+                content: '<h4 style="color:red">19306 25th Ave SE Bothell WA 98012</h4>'
+            })
+
+            infoWindow.open(map, marker)
+
+            marker.addListener('click', function(){
+                infoWindow.open(map, marker)
+            })
+        }
+    </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA3YvYAJ2WzyL9l_atc9LAw5PpD7v3KGg&callback=initMap"></script>
 </body>
 </html>
