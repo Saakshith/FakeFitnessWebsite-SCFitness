@@ -3,7 +3,7 @@
 :root {
   --accent-color: #ff0000;
   --accent-color-darken: #b80000;
-  --accent-color-lighten: ##ff5c5c;
+  --accent-color-lighten: #ff5c5c;
   --white-color: #f0f0f0;
   --black-color: #000000;
   --margin-default: 14%;
@@ -140,8 +140,10 @@ header {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-left: var(--margin-default);
   margin-right: var(--margin-default);
 }
@@ -214,6 +216,7 @@ header {
   border-radius: 25px;
   display: flex;
   flex-direction: column;
+  margin: 0.5rem;
 }
 
 .card-title-container {
@@ -242,8 +245,10 @@ header {
 /* Benifits Section */
 
 .benifits-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-left: var(--margin-default);
   margin-right: var(--margin-default);
 }
@@ -335,7 +340,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap-reverse;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 .pricing-plan-card {
@@ -344,6 +349,7 @@ header {
   width: 300px;
   border-radius: 25px;
   margin-right: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -388,12 +394,17 @@ header {
   justify-content: center;
 }
 
+
 #pricing-plan-card-scaled {
   transform: scale(1.07);
   border: 10px solid var(--accent-color);
 }
 
 /* Contact Us */
+
+#contact-us{
+  display: flex;
+}
 
 #map{
   height: 80vh;
@@ -412,6 +423,7 @@ header {
   /* top: 4950px; */
   top: 650%;
   margin-left: var(--margin-default);
+  justify-self: center;
 }
 
 .map-info-container-left{
